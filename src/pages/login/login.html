@@ -16,33 +16,34 @@
         <form class="section-text">
             <h1 class="title">Bem-vindo</h1>
             <p class="text-subtitle">Sua lista de compras inteligente começa
-            aqui.</p>
-            <label class="label" for="text">NOME</label>
-            <input type="text" id = "text-nome" class="input" placeholder="Seu nome completo aqui..." required>
+            aqui. Por favor faça o login!</p>
+            <label class="label" for="text-nome">NOME</label>
+            <input type="text" id="text-nome" class="input" placeholder="Seu nome completo aqui..." required>
 
-            <label class="label" for="email">EMAIL</label>
-            <input type="email" id = "text-email" class="input" placeholder="seu@email.com" required>
+            <label class="label" for="text-email">EMAIL</label>
+            <input type="email" id="text-email" class="input" placeholder="seu@email.com" required>
 
-            <button type="submit" class="btn-login">Entrar</button>
+            <button type="submit" id="btn-entrar" onclick="entrar()" class="btn-login" >Entrar</button>
         </form>
         <section class="signup-section">
             <p class="conect-text">ou conecte-se com</p>
             <div class="social-conect">
                 <div class="conta">
                     <img src="/src/assets/icons/google-logo.svg" alt="Google Logo" class="logo">
-                    <a href="#" class="signup-link">Google</a>
+                    <a href="https://mail.google.com" class="signup-link">Google</a>
                 </div>
                 <div class="conta">
                     <img src="/src/assets/icons/facebook-logo.svg" alt="Facebook Logo" class="logo">
-                    <a href="#" class="signup-link">Facebook</a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" class="signup-link">Facebook</a>
                 </div>
             </div>
             <div class="cadastre-section">
                 <p class="text-cadastre">Novo por aqui?</p>
-                <a href="#" class="cadastre">Cadastre-se</a>
+                <a href="http://127.0.0.1:5500/src/pages/cadastro/cadastro.html" class="cadastre">Cadastre-se</a>
             </div>
         </section>
     </main>
-    
+
+    <script src="/src/pages/login/script-login.js"></script>
 </body>
 </html>

@@ -63,7 +63,7 @@ body {
   font-family: var(--fonte-texto);
   font-size: 16px;
   font-weight: 300;
-  color: var(--cor-input-cinza);
+  color: var(--cor-icons-cinza-escuro);
 }
 
 .btn-cadastro {
@@ -82,8 +82,10 @@ body {
   transition: all 0.3s ease;
 }
 
-.btn-login:hover {
+.btn-cadastro:hover {
   background-color: #f897298e;
+  transform: scale(1.01);
+  transition: all 0.3s ease;
 }
 
 .signup-section {

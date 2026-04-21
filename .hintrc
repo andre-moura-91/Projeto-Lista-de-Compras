@@ -8,6 +8,12 @@
     "css-prefix-order": "off",
     "compat-api/html": "off",
     "axe/language": "off",
-    "axe/parsing": "off"
+    "axe/parsing": "off",
+    "axe/text-alternatives": [
+      "default",
+      {
+        "image-alt": "off"
+      }
+    ]
   }
 }

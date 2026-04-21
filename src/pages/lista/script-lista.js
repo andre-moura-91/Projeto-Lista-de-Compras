@@ -1,11 +1,15 @@
+$('#valor_input').mask("#.##0,00", {reverse: true});
+
 let carrinhosItens = []
 
 document.addEventListener('DOMContentLoaded', () => {
+
     const itemInput = document.getElementById('item_input');
     const valorInput = document.getElementById('valor_input');
     const addButton = document.getElementById('add_button');
 
     if (!itemInput || !valorInput || !addButton) return;
+
 
     const upgradeButtonState = () => {
         addButton.disabled = itemInput.value.trim().length === 0 || valorInput.value.trim().length === 0;  
