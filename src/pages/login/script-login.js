@@ -20,6 +20,10 @@ function entrar(event) {
         return;
     }
 
+    // Guardar dados antes de navegar
+    localStorage.setItem('nomeUsuario', nomeInput);
+    localStorage.setItem('emailUsuario', emailInput);
+
     alert('Login realizado com sucesso!');
     window.location.href = '/src/pages/bem-vindo/saudacao.html';
 }

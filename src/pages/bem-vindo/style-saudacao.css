@@ -138,6 +138,13 @@ body {
   margin-bottom: 3px;
 }
 
+#user-name {
+  font-family: nunito, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
 .welcome-subtitle {
   font-family: inter, sans-serif;
   font-size: 13px;
