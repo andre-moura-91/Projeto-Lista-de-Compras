@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  margin-right: 90px;
+  margin-right: 120px;
   margin-top: 20px;
 }
 
@@ -37,23 +37,35 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 20px 30PX;
+  padding: 12px 30PX;
 }
 
 .title {
   font-family: var(--fonte-principal-titulo);
   font-size: 30px;
   color: var(--cor-text2-preto);
+  padding: 0 5px;
 }
 
 .text-subtitle {
   font-family: var(--fonte-texto);
-  font-size: 15px;
+  font-size: 14px;
   color: var(--cor-subtitulo-cinza);
+  padding: 0 5px;
 }
 
-.input {
-  background-color: #ffffff;
+.conteiner-input {
+  background-color: var(--cor-text1-branco);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 12px;
+  padding: 0px 15px;
+  gap: 5px;
+}
+
+.input-nome {
+  background-color: var(--cor-text1-branco);
   width: 100%;
   padding: 18px 15px;
   border: none;
@@ -64,6 +76,22 @@ body {
   font-size: 16px;
 }
 
+.input-password {
+  background-color: var(--cor-text1-branco);
+  width: 100%;
+  padding: 18px 0px;
+  border: none;
+  color: var(--cor-subtitulo-cinza);
+  font-family: var(--fonte-texto);
+  font-weight: 300;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
 .label {
   font-family: var(--fonte-texto);
   font-size: 12px;
@@ -71,6 +99,32 @@ body {
   color: var(--cor-subtitulo-cinza);
   margin-top: 15px;
   letter-spacing: 1px;
+  padding: 0 5px;
+}
+
+#password-line, #password-offline {
+  cursor: pointer;
+  color: var(--cor-icons-cinza-escuro);
+  font-size: 22px;
+}
+
+.btn-esqueci {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--cor-bg-clara);
+  font-family: var(--fonte-texto);
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--cor-subtitulo-cinza);
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.btn-esqueci:hover {
+  color: var(--cor-icons-cinza-escuro);
 }
 
 ::placeholder {

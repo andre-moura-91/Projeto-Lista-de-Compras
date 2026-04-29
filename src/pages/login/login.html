@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="/src/pages/login/login.css">
     
     <title>Organize&Compre</title>
@@ -14,14 +15,19 @@
     </header>
     <main>
         <form class="section-text">
-            <h1 class="title">Bem-vindo</h1>
+            <h1 class="title">Login</h1>
             <p class="text-subtitle">Sua lista de compras inteligente começa
             aqui. Por favor faça o login!</p>
-            <label class="label" for="text-nome">NOME</label>
-            <input type="text" id="text-nome" class="input" placeholder="Seu nome completo aqui..." required>
+            <label class="label" for="text-nome">NOME OU EMAIL DO USUÁRIO</label>
+            <input type="text" id="text-nome" class="input-nome" placeholder="Seu nome ou email aqui..." required>
 
-            <label class="label" for="text-email">EMAIL</label>
-            <input type="email" id="text-email" class="input" placeholder="seu@email.com" required>
+            <label class="label" for="text-password">SENHA</label>
+            <div class="conteiner-input">
+                <input type="password" id="text-password" class="input-password" placeholder="Sua senha aqui..." required>
+                <i id="password-line" class="ri-eye-line"></i>
+                <i id="password-offline" class="ri-eye-off-line"></i>
+            </div>
+            <button id="btn-esqueci" class="btn-esqueci">Esqueci minha senha</button>
 
             <button type="submit" id="btn-entrar" onclick="entrar()" class="btn-login" >Entrar</button>
         </form>

@@ -12,7 +12,14 @@ body {
     justify-content: space-around;
     margin: 5px;
     padding: 10px;
-    gap: 40px;
+    gap: 30px;
+}
+
+.container-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
 }
 
 h1 {
@@ -24,7 +31,26 @@ h1 {
 
 #nav_logo {
     font-size: 18px;
-    width: 40px;
+    width: 35px;
+    color: var(--cor-principal-laranja);
+}
+
+#save {
+    font-size: 19px;
+    color: var(--cor-icons-cinza-escuro);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#save-mark {
+    display: none;
+    font-size: 19px;
+    color: var(--cor-principal-laranja);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#save:hover {
     color: var(--cor-principal-laranja);
 }
 
@@ -36,15 +62,11 @@ h1 {
 }
 
 #nav_trash:hover {
-    color: #2b2a2a;
+    color: var(--cor-principal-laranja);
 }
 
 #nav_trash:active {
-    color: #2b2a2a;
-}
-
-#nav_trash:hover {
-    color: #dddddd;
+    color: var(--cor-principal-laranja);
 }
 
 #input_geral {
@@ -410,13 +432,11 @@ input[type="checkbox"] {
   position: relative;
 }
 
-/* Quando o checkbox estiver marcado (Checked) */
 input[type="checkbox"]:checked {
   background-color: #2ec4b6; /* A cor que você desejar */
   border-color: #2ec4b6;
 }
 
-/* Adicionando um "check" (v) dentro do círculo quando marcado */
 input[type="checkbox"]:checked::after {
   content: '✔';
   position: absolute;
@@ -427,8 +447,35 @@ input[type="checkbox"]:checked::after {
   transform: translate(-50%, -50%);
 }
 
-/* Efeito de hover (passar o mouse) */
 input[type="checkbox"]:hover {
   border-color: #cbcccc solid 1px;
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.container-footer {
+    background-color: var(--cor-text1-branco);
+    display: flex;
+    height: 55px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 5px 1.0px rgba(92, 92, 92, 0.10);
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 10px 10px 10px 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+#home, #historical, #cart-nav {
+    width: 20px;
+    cursor: pointer;
+}
+
+#home:hover, #historical:hover, #cart-nav:hover {
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+    color: var(--cor-principal-laranja);
 }

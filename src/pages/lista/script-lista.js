@@ -23,6 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // ligar o botão 'Adicionar' à função adicionarItem
     addButton.onclick = adicionarItem;
 
+    let saveAll = document.getElementById('save');
+    if (saveAll) {
+    saveAll.onclick = () => salvarLista();
+    }
+
     let excluirTudo = document.getElementById('nav_trash');
     if (excluirTudo) {
     excluirTudo.onclick = () => limparLista();
@@ -204,6 +209,18 @@ function limparItem(i) {
 function limparLista() {
     if (confirm('Deseja excluir tudo?')) {
         carrinhosItens = [];
+        renderizarItensValor();
+    }
+}
+
+function salvarLista() {
+    if (confirm('Deseja salvar a lista?')) {
+        let saveAll = document.getElementById('save');
+        let saveMark = document.getElementById('save-mark');
+        saveMark.style.display = 'block';
+        saveAll.style.display = 'none';
+
+        localStorage.setItem('minhaLista', JSON.stringify(carrinhosItens));
         renderizarItensValor();
     }
 }
