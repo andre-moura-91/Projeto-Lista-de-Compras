@@ -4,6 +4,7 @@ const senha = document.getElementById('text-password');
 const btnEntrar = document.getElementById('btn-entrar');
 const passwordLine = document.getElementById('password-line');
 const passwordOffline = document.getElementById('password-offline');
+const esqueciSenha = document.getElementById('esqueci-senha');
 
 passwordOffline.style.display = 'none';
 
@@ -35,16 +36,21 @@ function entrar(event) {
         return;
     }
 
-    if (!emailRegex.test(emailInput)) {
-        alert('Por favor, insira um email válido.');
-        return;
-    }
+    //if (!emailRegex.test(emailInput)) {
+    //    alert('Por favor, insira um email válido.');
+    //    return;
+    //}
 
     // Guardar dados antes de navegar
-    localStorage.setItem('nomeUsuario', nomeInput);
-    localStorage.setItem('senhalUsuario', emailInput);
+    localStorage.setItem('nome', nomeInput);
+    localStorage.setItem('senha', senhaInput);
 
     alert('Login realizado com sucesso!');
     window.location.href = '/src/pages/bem-vindo/saudacao.html';
 }
+
+esqueciSenha.addEventListener('click', function() {
+    return
+});
+
 btnEntrar.addEventListener('click', entrar);

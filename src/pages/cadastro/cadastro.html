@@ -3,33 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="/src/pages/cadastro/style-cadastro.css">
     <title>Organize&Compre</title>
 </head>
 <body>
-    <header class="header-conta">
-        <h1 class="title">Criar Conta</h1>
-    </header>
+    
     <main>
+        <header class="header-conta">
+            <h1 class="title">Criar Conta</h1>
+        </header>
         <form class="section-text">
             <div class="nome-sobrenome">
                 <div class="nome">
                     <label for="text-nome" class="label">NOME</label>
-                    <input type="text" id="text-nome" class="input" placeholder="Ex: João" required>
+                    <input type="text" id="text-nome" class="input-nome" placeholder="Ex: João" required>
                 </div>
                 <div class="sobrenome">
                     <label for="text-sobrenome" class="label">SOBRENOME</label>
-                    <input type="text" id="text-sobrenome" class="input" placeholder="Ex: Silva" required>
+                    <input type="text" id="text-sobrenome" class="input-sobrenome" placeholder="Ex: Silva" required>
                 </div>
             </div>
 
             <label  for="text-email" class="label">EMAIL</label>
-            <input type="email" id = "text-email" class="input" placeholder="seu@email.com" required>
+            <input type="email" id = "text-email" class="input-email" placeholder="seu@email.com" required>
 
-            <label  for="phone" class="label">TELEFONE</label>
-            <input id="phone" type="text" inputmode="tel" class="input" autocomplete="tel"placeholder="(11) 99999-9999" required>
-
+            <label  for="text-password" class="label">SENHA</label>
+            <div class="conteiner-input">
+                <input id="password" type="password" class="input-password" placeholder="Senha (no mínimo 6 caracteres)" required>
+            </div>
+            <label  for="text-password" class="label">CONFIRMAR SENHA</label>
+            <div class="conteiner-input">
+                <input id="confirm-password" type="password" class="input-password" placeholder="Confirme sua senha" required>
+            </div>
+            <span class="mostrar-senha" id="password-mostrar">MOSTRAR SENHA</span>
+            
             <button type="submit" id="btn-cadastro" onclick="cadastro()" class="btn-cadastro">Cadastrar</button>
         </form>
         <section class="signup-section">
