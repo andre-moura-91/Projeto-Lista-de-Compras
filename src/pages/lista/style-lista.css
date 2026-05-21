@@ -1,17 +1,9 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-}
+@import url(/src/styles/base/global.css);
+@import url(/src/styles/components/bottomNavBar.css);
 
 body {
-    background-color: #ebebeb;
+    background-color: var(--cor-bg-clara);
     justify-content: center;
 }
 
@@ -21,42 +13,65 @@ body {
     justify-content: space-around;
     margin: 5px;
     padding: 10px;
-    gap: 40px;
+    gap: 30px;
+}
+
+.container-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
 }
 
 h1 {
-    font-family: 'nunito', sans-serif;
+    font-family: var(--font-principal-titulo);
     font-size: 20px;
     font-weight: 800;
-    color: #1a1919;
+    color: var(--cor-text2-preto);
 }
 
 #nav_logo {
     font-size: 18px;
-    color: #ff6b35;
+    width: 35px;
+    color: var(--cor-principal-laranja);
+}
+
+#save {
+    font-size: 19px;
+    color: var(--cor-icons-cinza-escuro);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#save-mark {
+    display: none;
+    font-size: 19px;
+    color: var(--cor-principal-laranja);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#save:hover {
+    color: var(--cor-principal-laranja);
 }
 
 #nav_trash {
     font-size: 17px;
-    color: #b4b4b4;
+    color: var(--cor-icons-cinza-escuro);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 #nav_trash:hover {
-    color: #2b2a2a;
+    color: var(--cor-principal-laranja);
 }
 
 #nav_trash:active {
-    color: #2b2a2a;
-}
-
-#nav_trash:hover {
-    color: #dddddd;
+    color: var(--cor-principal-laranja);
 }
 
 #input_geral {
-    background-color: #ffffff;
+    background-color: var(--cor-text1-branco);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,7 +93,7 @@ h1 {
 }
 
 #item_input {
-    background-color: #eeeeee;
+    background-color: var(--cor-input-cinza);
     width: 50%;
     padding: 8px;
     border-radius: 10px;
@@ -89,14 +104,14 @@ h1 {
 }
 
 #valor_input {
-    background-color: #eeeeee;
+    background-color: var(--cor-input-cinza);
     width: 28%;
     padding: 8px;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    border: #f8f8f85d solid 0.5px;
-    font-family: 'nunito', sans-serif;
+    border: #fdfcfc5d solid 0.5px;
+    font-family: var(--font-principal-titulo);
     font-size: 13px;
 }
 
@@ -108,8 +123,8 @@ h1 {
     border-radius: 10px;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    background-color: #eeeeee;
-    color: #8a8989;
+    background-color: var(--cor-input-cinza);
+    color: var(--cor-icons-cinza-escuro);
 }
 
 #add_button {
@@ -118,10 +133,10 @@ h1 {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-texto);
     font-size: 16px;
-    background-color: #ff6b35;
-    color: #ffffff;
+    background-color: var(--cor-principal-laranja);
+    color: var(--cor-text1-branco);
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -141,11 +156,11 @@ add_button:hover {
 }
 
 .menos-qntd, .mais-qntd {
-    background-color: #ffffff;
+    background-color: var(--cor-text1-branco);
     border-radius: 8px;
     padding: 4px 10px 3px 10px;
-    color: #5a5a5a;
-    font-family: 'nunito', sans-serif;
+    color: var(--cor-subtitulo-cinza);
+    font-family: var(--font-principal-titulo);
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;
@@ -153,13 +168,13 @@ add_button:hover {
 }
 
 .menos-qntd:hover, .mais-qntd:hover {
-    background-color: #eeeeee;
+    background-color: var(--cor-input-cinza);
 }
 
 #quantidade-itens {
     padding: 4px 5px 3px 5px;
-    font-family: 'nunito', sans-serif;
-    color: #464646;
+    font-family: var(--font-principal-titulo);
+    color: var(--cor-subtitulo-cinza);
     font-size: 13px;
     font-weight: 700;
     width: 10px;
@@ -167,8 +182,8 @@ add_button:hover {
 }
 
 #qtn-itens {
-    color: #5a5a5a;
-    font-family: 'nunito', sans-serif;
+    color: var(--cor-subtitulo-cinza);
+    font-family: var(--font-principal-titulo);
     font-size: 10px;
     font-weight: 400;
 }
@@ -202,14 +217,14 @@ ul li {
     display: flex;
     width: 95%;
     justify-content: space-between;
-    background-color: #ffffff;
+    background-color: var(--cor-text1-branco);
     border-radius: 8px;
     padding: 4px 10px 3px 10px;
     margin: 3px 20px 3px 20px;
     align-items: center;
     justify-content: flex-start;
     color: #5a5a5a;
-    font-family: 'nunito', sans-serif;
+    font-family: var(--font-principal-titulo);
     font-size: 10px;
     font-weight: 400;
 }
@@ -235,7 +250,7 @@ span {
 }
 
 #total_itens {
-    background-color: #ffffff;
+    background-color: var(--cor-text1-branco);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -245,7 +260,7 @@ span {
     margin-bottom: 3px;
     padding: 14px;
     gap: 8px;
-    font-family: 'nunito', sans-serif;
+    font-family: var(--font-principal-titulo);
     font-size: 13px;
     font-weight: 400;
 }
@@ -274,27 +289,28 @@ span {
     gap: 5px;
 }
 
-.total_label {
+.soma_label, .total_itens {
     font-size: 10px;
-    color: #b4b4b4;
+    color: var(--cor-subtitulo-cinza);
+    letter-spacing: 1px;
 }
 
 .total_value {
-    font-family: nunito, sans-serif;
+    font-family: var(--font-principal-titulo);
     font-size: 14px;
     font-weight: 800;
 }
 
 #pendente {
-    color: #1a1919
+    color: var(--cor-text2-preto);
 }
 
 #carrinho {
-    color: #2ec4b6
+    color: var(--cor-valor-carrinho);
 }
 
 #total {
-    color: #ff6b35
+    color: var(--cor-principal-laranja);
 }
 
 #quantidade_btns {
@@ -309,9 +325,9 @@ span {
 }
 
 .btn {
-    background-color: #ffffff;
-    color: #6b6b6b;
-    font-family: nunito, sans-serif;
+    background-color: var(--cor-text1-branco);
+    color: var(--cor-icons-cinza-escuro);
+    font-family: var(--font-principal-titulo);
     font-size: 10px;
     font-weight: 300;
     width: 50%;
@@ -328,14 +344,14 @@ span {
 }
 
 .btn:hover {
-    background-color: #ff6b35;
-    color: #ffffff;
+    background-color: var(--cor-principal-laranja);
+    color: var(--cor-text1-branco);
 }
 
 #mensagemSucesso {
     font-family: nunito, sans-serif;
     font-size: 14px;
-    color: #2ec4b6;
+    color: var(--cor-valor-carrinho);
     text-align: center;
     display: none;
 }
@@ -352,21 +368,22 @@ span {
 
 #cart {
     font-size: 48px;
-    color: #b4b4b4;
+    color: var(--cor-icons-cinza-escuro);
 }
 
 .lista_vazia {
-    font-family: nunito, sans-serif;
+    font-family: var(--font-principal-titulo);
     font-weight: 600;
     font-size: 18px;
-    color: #1d1d1d;
+    color: var(--cor-text2-preto);
 }
 
 .adicione {
-    font-family: nunito, sans-serif;
+    font-family: var(--font-principal-titulo);
     font-weight: 200;
     font-size: 14px;
     color: #707070;
+    letter-spacing: 1px;
 }
 
 .itemExcluir {
@@ -383,7 +400,7 @@ span {
     transition: all 0.3s ease;
 }
 .itemExcluir:hover {
-    background-color: #ff6b35;
+    background-color: var(--cor-principal-laranja);
 }
 
 #quantidade_itens {
@@ -418,13 +435,11 @@ input[type="checkbox"] {
   position: relative;
 }
 
-/* Quando o checkbox estiver marcado (Checked) */
 input[type="checkbox"]:checked {
   background-color: #2ec4b6; /* A cor que você desejar */
   border-color: #2ec4b6;
 }
 
-/* Adicionando um "check" (v) dentro do círculo quando marcado */
 input[type="checkbox"]:checked::after {
   content: '✔';
   position: absolute;
@@ -435,7 +450,6 @@ input[type="checkbox"]:checked::after {
   transform: translate(-50%, -50%);
 }
 
-/* Efeito de hover (passar o mouse) */
 input[type="checkbox"]:hover {
   border-color: #cbcccc solid 1px;
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);

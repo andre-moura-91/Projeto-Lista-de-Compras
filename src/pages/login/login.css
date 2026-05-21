@@ -14,6 +14,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
+  margin-right: 120px;
   margin-top: 20px;
 }
 
@@ -36,31 +37,69 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 20px 30PX;
+  padding: 12px 30PX;
 }
 
 .title {
   font-family: var(--fonte-principal-titulo);
   font-size: 30px;
   color: var(--cor-text2-preto);
+  padding: 0 5px;
 }
 
 .text-subtitle {
   font-family: var(--fonte-texto);
-  font-size: 15px;
+  font-size: 14px;
   color: var(--cor-subtitulo-cinza);
+  padding: 0 5px;
 }
 
-.input {
-  background-color: #ffffff;
+.conteiner-input {
+  background-color: var(--cor-text1-branco);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 12px;
+  gap: 5px;
+}
+
+.input-nome {
+  background-color: var(--cor-text1-branco);
   width: 100%;
-  padding: 18px 15px;
+  padding: 15px 15px;
   border: none;
   color: var(--cor-subtitulo-cinza);
   font-family: var(--fonte-texto);
   font-weight: 300;
   border-radius: 12px;
   font-size: 16px;
+}
+
+.input-password {
+  background-color: var(--cor-text1-branco);
+  width: 100%;
+  padding: 15px 0px 15px 15px;
+  border: none;
+  color: var(--cor-subtitulo-cinza);
+  font-family: var(--fonte-texto);
+  font-weight: 300;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+input:focus-visible {
+    outline: none;
+    
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    
+    -webkit-text-fill-color: var(--cor-subtitulo-cinza) !important;
+    
+    caret-color: var(--cor-subtitulo-cinza);
 }
 
 .label {
@@ -70,21 +109,50 @@ body {
   color: var(--cor-subtitulo-cinza);
   margin-top: 15px;
   letter-spacing: 1px;
+  padding: 0 5px;
+}
+
+#password-line, #password-offline {
+  cursor: pointer;
+  color: var(--cor-icons-cinza-escuro);
+  font-size: 22px;
+  margin-right: 15px;
+}
+
+.btn-esqueci {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--cor-bg-clara);
+  font-family: var(--fonte-texto);
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--cor-subtitulo-cinza);
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.btn-esqueci:hover {
+  color: var(--cor-icons-cinza-escuro);
 }
 
 ::placeholder {
   font-family: var(--fonte-texto);
   font-size: 16px;
   font-weight: 300;
-  color: var(--cor-input-cinza);
+  color: var(--cor-icons-cinza-escuro);
 }
 
 .btn-login {
   background-color: var(--cor-principal-laranja);
   color: var(--cor-text1-branco);
   width: 100%;
-  padding: 15px 15px;
+  padding: 14px 15px;
   border: none;
+  text-align: center;
+  text-decoration: none;
   font-family: var(--fonte-principal-titulo);
   font-weight: 500;
   border-radius: 9999px;
@@ -96,7 +164,8 @@ body {
 }
 
 .btn-login:hover {
-  background-color: #f897298e;
+  background-color: #f89729bb;
+  transition: all 0.3s ease;
 }
 
 .signup-section {
@@ -131,25 +200,31 @@ body {
 .conta {
   display: flex;
   background-color: #ffffff;
-  padding: 12px 15px;
   width: 140px;
+  padding: 0 0 0 10px;
   align-items: center;
   justify-content: center;
   border-radius: 12px;
   flex-direction: row;
-  gap: 10px;
   font-family: var(--fonte-texto);
   font-size: 14px;
   font-weight: 500;
   box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .signup-link {
   font-family: var(--fonte-texto);
   font-size: 14px;
   font-weight: 500;
+  padding: 12px 10px;
   color: var(--cor-text2-preto);
   text-decoration: none;
+}
+
+.conta:hover {
+  transform: scale(0.97);
+  transition: all 0.3s ease;
 }
 
 .logo {
@@ -178,4 +253,10 @@ body {
   font-weight: 500;
   color: var(--cor-principal-laranja);
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cadastre:hover {
+  color: rgb(253, 204, 144);
+  transition: all 0.3s ease;
 }

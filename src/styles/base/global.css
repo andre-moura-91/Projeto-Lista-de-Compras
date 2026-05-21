@@ -16,9 +16,10 @@
   --cor-text1-branco: #ffffff;
   --cor-text2-preto: #2F2E2E;
   --cor-bg-clara: #F9F6F5;
-  --cor-icons-cinza-escura: #afacacc5;
-  --cor-input-cinza: #D3D3D3;
+  --cor-icons-cinza-escuro: #686767;
+  --cor-input-cinza: #eeeeee;
   --cor-subtitulo-cinza: #5C5B5B;
+  --cor-valor-carrinho: #43cfcf;
 }
 
 /* 2. RESET CSS (Padroniza o comportamento dos elementos) */
@@ -26,6 +27,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: none;
 }
 
 /* 3. FORMATAÇÃO BASE E HERANÇA */
@@ -33,7 +35,7 @@ body {
   /* Ao aplicar aqui, todos os textos do site herdam essa fonte automaticamente */
   font-family: var(--fonte-logo, --fonte-principal-titulo, --fonte-texto);
   background-color: var(--cor-principal-laranja, --cor-bg-clara, --cor-input-cinza);
-  color: var(--cor-text2-preto, --cor-text1-branco, --cor-icons-cinza-escura, --cor-principal-laranja, --cor-subtitulo-cinza, --cor-input-cinza);
+  color: var(--cor-text2-preto, --cor-text1-branco, --cor-icons-cinza-escuro, --cor-principal-laranja, --cor-subtitulo-cinza, --cor-input-cinza);
   line-height: 1.6;
 }
 

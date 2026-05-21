@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="/src/pages/login/login.css">
     
     <title>Organize&Compre</title>
@@ -14,35 +15,41 @@
     </header>
     <main>
         <form class="section-text">
-            <h1 class="title">Bem-vindo</h1>
+            <h1 class="title">Login</h1>
             <p class="text-subtitle">Sua lista de compras inteligente começa
-            aqui.</p>
-            <label class="label" for="text">NOME</label>
-            <input type="text" id = "text-nome" class="input" placeholder="Seu nome completo aqui..." required>
+            aqui. Por favor faça o login!</p>
+            <label class="label" for="text-nome">NOME DO USUÁRIO</label>
+            <input type="text" id="text-nome" class="input-nome" placeholder="Ex: João Silva..." required>
 
-            <label class="label" for="email">EMAIL</label>
-            <input type="email" id = "text-email" class="input" placeholder="seu@email.com" required>
+            <label class="label" for="text-password">SENHA</label>
+            <div class="conteiner-input">
+                <input type="password" id="text-password" class="input-password" placeholder="Sua senha aqui..." required>
+                <i id="password-line" class="ri-eye-line"></i>
+                <i id="password-offline" class="ri-eye-off-line"></i>
+            </div>
+            <button id="esqueci-senha" class="btn-esqueci">Esqueci minha senha</button>
 
-            <button type="submit" class="btn-login">Entrar</button>
+            <button type="submit" id="btn-entrar" onclick="entrar()" class="btn-login" >Entrar</button>
         </form>
         <section class="signup-section">
             <p class="conect-text">ou conecte-se com</p>
             <div class="social-conect">
                 <div class="conta">
                     <img src="/src/assets/icons/google-logo.svg" alt="Google Logo" class="logo">
-                    <a href="#" class="signup-link">Google</a>
+                    <a href="https://mail.google.com" class="signup-link">Google</a>
                 </div>
                 <div class="conta">
                     <img src="/src/assets/icons/facebook-logo.svg" alt="Facebook Logo" class="logo">
-                    <a href="#" class="signup-link">Facebook</a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" class="signup-link">Facebook</a>
                 </div>
             </div>
             <div class="cadastre-section">
                 <p class="text-cadastre">Novo por aqui?</p>
-                <a href="#" class="cadastre">Cadastre-se</a>
+                <a href="/src/pages/cadastro/cadastro.html" class="cadastre">Cadastre-se</a>
             </div>
         </section>
     </main>
-    
+
+    <script src="/src/pages/login/script-login.js" type="module"></script>
 </body>
 </html>
