@@ -35,19 +35,19 @@
         </div>
         <section id="total_itens">
             <div id="Info_Pendente">
-                <a class="total_label">PENDENTE</a>
+                <a class="soma_label">PENDENTE</a>
                 <span class="total_value" inputmode="decimal" step="0.01" id="pendente">R$ 0,00</span>
-                <span class="total_label" id="qtn-pendente">0 itens</span>
+                <span class="total_itens" id="qtn-pendente">0 itens</span>
             </div>
             <div id="Info_Carrinho">
-                <a class="total_label">NO CARRINHO</a>
+                <a class="soma_label">NO CARRINHO</a>
                 <span class="total_value" id="carrinho">R$ 0,00</span>
-                <span class="total_label" id="qtn-carrinho">0 itens</span>
+                <span class="total_itens" id="qtn-carrinho">0 itens</span>
             </div>
             <div id="Info_Total">
-                <a class="total_label">TOTAL</a>
+                <a class="soma_label">TOTAL</a>
                 <span class="total_value" id="total">R$ 0,00</span>
-                <span class="total_label" id="qtn-total">0 itens</span>
+                <span class="total_itens" id="qtn-total">0 itens</span>
             </div>
         </section>
         <div id="quantidade_btns">
@@ -66,15 +66,29 @@
         </ul>
     </main>
     <footer>
-        <div class="container-footer">
-            <img src="/src/assets/icons/home.svg" id="home">
-            <img src="/src/assets/icons/historical.svg" id="historical">
-            <img src="/src/assets/icons/cart-nav.svg" id="cart-nav">
+        <div class="container-navigation">
+            <a href="http://127.0.0.1:5500/src/pages/bem-vindo/saudacao.html" class="bottom-navbar">
+                <span class="home"><i class="ri-home-9-fill"></i></span>
+                <span class="titlle-icon">Início</span>
+            </a>
+            <a href="http://127.0.0.1:5500/src/pages/historico/historical.html" class="bottom-navbar">
+                <span class="history"><i class="ri-history-fill"></i></span>
+                <span class="titlle-icon">Histórico</span>
+            </a>
+            <a href="http://127.0.0.1:5500/src/pages/lista/index-lista.html" class="bottom-navbar">
+                <span class="cart-nav"><i class="ri-shopping-cart-2-fill"></i></span>
+                <span class="titlle-icon">Carrinho</span>
+            </a>
+            <a href="http://127.0.0.1:5500/src/pages/pre-lista/pre-lista.html" class="bottom-navbar">
+                <span class="list"><i class="ri-list-unordered"></i></span>
+                <span class="titlle-icon">Pré-lista</span>
+            </a>
         </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script src="script-lista.js"></script>
+    <script src="/src/navigation/appNavigation.js"></script>
 </body>
 </html>

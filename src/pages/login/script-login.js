@@ -36,11 +36,6 @@ function entrar(event) {
         return;
     }
 
-    //if (!emailRegex.test(emailInput)) {
-    //    alert('Por favor, insira um email válido.');
-    //    return;
-    //}
-
     // Guardar dados antes de navegar
     localStorage.setItem('nome', nomeInput);
     localStorage.setItem('senha', senhaInput);
@@ -50,7 +45,7 @@ function entrar(event) {
 }
 
 esqueciSenha.addEventListener('click', function() {
-    return
+    window.location.href = '/src/pages/password/redefinir-senha.html';
 });
 
 btnEntrar.addEventListener('click', entrar);

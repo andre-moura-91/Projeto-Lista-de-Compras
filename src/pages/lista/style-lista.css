@@ -1,5 +1,6 @@
 
 @import url(/src/styles/base/global.css);
+@import url(/src/styles/components/bottomNavBar.css);
 
 body {
     background-color: var(--cor-bg-clara);
@@ -288,9 +289,10 @@ span {
     gap: 5px;
 }
 
-.total_label {
+.soma_label, .total_itens {
     font-size: 10px;
-    color: var(--cor-icons-cinza-escuro);
+    color: var(--cor-subtitulo-cinza);
+    letter-spacing: 1px;
 }
 
 .total_value {
@@ -342,14 +344,14 @@ span {
 }
 
 .btn:hover {
-    background-color: #ff6b35;
-    color: #ffffff;
+    background-color: var(--cor-principal-laranja);
+    color: var(--cor-text1-branco);
 }
 
 #mensagemSucesso {
     font-family: nunito, sans-serif;
     font-size: 14px;
-    color: #2ec4b6;
+    color: var(--cor-valor-carrinho);
     text-align: center;
     display: none;
 }
@@ -366,21 +368,22 @@ span {
 
 #cart {
     font-size: 48px;
-    color: #b4b4b4;
+    color: var(--cor-icons-cinza-escuro);
 }
 
 .lista_vazia {
-    font-family: nunito, sans-serif;
+    font-family: var(--font-principal-titulo);
     font-weight: 600;
     font-size: 18px;
-    color: #1d1d1d;
+    color: var(--cor-text2-preto);
 }
 
 .adicione {
-    font-family: nunito, sans-serif;
+    font-family: var(--font-principal-titulo);
     font-weight: 200;
     font-size: 14px;
     color: #707070;
+    letter-spacing: 1px;
 }
 
 .itemExcluir {
@@ -397,7 +400,7 @@ span {
     transition: all 0.3s ease;
 }
 .itemExcluir:hover {
-    background-color: #ff6b35;
+    background-color: var(--cor-principal-laranja);
 }
 
 #quantidade_itens {
@@ -450,32 +453,4 @@ input[type="checkbox"]:checked::after {
 input[type="checkbox"]:hover {
   border-color: #cbcccc solid 1px;
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
-}
-
-.container-footer {
-    background-color: var(--cor-text1-branco);
-    display: flex;
-    height: 55px;
-    border-radius: 20px;
-    box-shadow: 0px 1px 5px 1.0px rgba(92, 92, 92, 0.10);
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    padding: 10px 10px 10px 10px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-}
-
-#home, #historical, #cart-nav {
-    width: 20px;
-    cursor: pointer;
-}
-
-#home:hover, #historical:hover, #cart-nav:hover {
-    transform: scale(1.5);
-    transition: all 0.3s ease;
-    color: var(--cor-principal-laranja);
 }

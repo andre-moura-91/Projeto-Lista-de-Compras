@@ -1,0 +1,80 @@
+@import url('../../styles/base/global.css');
+
+.container-navigation {
+    background-color: var(--cor-text1-branco);
+    display: flex;
+    width: 100%;
+    height: 65px;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px 1px 5px 1.0px rgba(92, 92, 92, 0.10);
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 10px 10px 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--fonte-principal-titulo);
+    text-decoration: none;
+}
+
+.titlle-icon {
+    position: absolute;
+    font-size: 14px;
+    color: var(--cor-icons-cinza-escuro);
+    margin-top: 36px;
+    z-index: 1;
+}
+
+.titlle-icon:hover:active {
+    display: block;
+    color: var(--cor-principal-laranja);
+    transition: all 0.3s ease;
+}
+
+svg {
+    transition: all 0.3s ease;
+}
+
+.home, .history, .cart-nav, .list {
+    display: flex;
+    width: 65px;
+    height: 65px;
+    align-items: center;
+    justify-content: center;
+    border: var(--cor-text1-branco) solid 7px;
+    background-color: var(--cor-text1-branco);
+    font-size: 22px;
+    color: var(--cor-icons-cinza-escuro);
+    z-index: 2;
+}
+
+.home:hover, .history:hover, .cart-nav:hover, .list:hover {
+    margin-bottom: 45px;
+    width: 65px;
+    height: 65px;
+    align-items: center;
+    justify-content: center;
+    border: var(--cor-text1-branco) solid 7px;
+    background-color: #fcead4;
+    border-radius: 50%;
+    color: var(--cor-principal-laranja);
+    transition: all 0.3s ease;
+}
+
+.bottom-navbar {
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+

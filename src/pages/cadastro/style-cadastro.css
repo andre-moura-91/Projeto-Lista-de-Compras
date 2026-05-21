@@ -31,7 +31,7 @@ body {
   font-size: 30px;
   font-weight: 800;
   color: var(--cor-text2-preto);
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: 30px;
 }
 
@@ -45,22 +45,10 @@ body {
   gap: 5px;
 }
 
-.input-nome, .input-sobrenome, .input-email {
+.input-nome, .input-sobrenome, .input-email, .input-password {
   background-color: #ffffff;
   width: 100%;
   padding: 15px 20px;
-  border: none;
-  color: var(--cor-subtitulo-cinza);
-  font-family: var(--fonte-texto);
-  font-weight: 200;
-  border-radius: 8px;
-  font-size: 14px;
-}
-
-.input-password {
-  background-color: #ffffff;
-  width: 100%;
-  padding: 15px 0px;
   border: none;
   color: var(--cor-subtitulo-cinza);
   font-family: var(--fonte-texto);
@@ -91,13 +79,11 @@ input:focus-visible {
 .mostrar-senha {
   display: flex;
   font-family: var(--fonte-texto);
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 11px;
+  font-weight: 300;
   color: var(--cor-subtitulo-cinza);
-  margin-top: 15px;
+  margin-top: 10px;
   letter-spacing: 1px;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
 }

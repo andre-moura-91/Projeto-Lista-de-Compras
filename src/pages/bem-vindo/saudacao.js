@@ -1,5 +1,5 @@
 // Recuperar dados do usuário do localStorage
-const nomeGuardado = localStorage.getItem('nomeUsuario');
+const nomeGuardado = localStorage.getItem('nome');
 
 // Se não houver usuário logado, redirecionar para login
 if (!nomeGuardado) {

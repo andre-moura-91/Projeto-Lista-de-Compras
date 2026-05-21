@@ -60,14 +60,13 @@ body {
   flex-direction: row;
   align-items: center;
   border-radius: 12px;
-  padding: 0px 15px;
   gap: 5px;
 }
 
 .input-nome {
   background-color: var(--cor-text1-branco);
   width: 100%;
-  padding: 18px 15px;
+  padding: 15px 15px;
   border: none;
   color: var(--cor-subtitulo-cinza);
   font-family: var(--fonte-texto);
@@ -79,7 +78,7 @@ body {
 .input-password {
   background-color: var(--cor-text1-branco);
   width: 100%;
-  padding: 18px 0px;
+  padding: 15px 0px 15px 15px;
   border: none;
   color: var(--cor-subtitulo-cinza);
   font-family: var(--fonte-texto);
@@ -90,6 +89,17 @@ body {
 
 input:focus-visible {
     outline: none;
+    
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    
+    -webkit-text-fill-color: var(--cor-subtitulo-cinza) !important;
+    
+    caret-color: var(--cor-subtitulo-cinza);
 }
 
 .label {
@@ -106,6 +116,7 @@ input:focus-visible {
   cursor: pointer;
   color: var(--cor-icons-cinza-escuro);
   font-size: 22px;
+  margin-right: 15px;
 }
 
 .btn-esqueci {
@@ -138,7 +149,7 @@ input:focus-visible {
   background-color: var(--cor-principal-laranja);
   color: var(--cor-text1-branco);
   width: 100%;
-  padding: 15px 15px;
+  padding: 14px 15px;
   border: none;
   text-align: center;
   text-decoration: none;
@@ -154,7 +165,6 @@ input:focus-visible {
 
 .btn-login:hover {
   background-color: #f89729bb;
-  transform: scale(1.01);
   transition: all 0.3s ease;
 }
 
@@ -213,7 +223,8 @@ input:focus-visible {
 }
 
 .conta:hover {
-  transform: scale(1.02);
+  transform: scale(0.97);
+  transition: all 0.3s ease;
 }
 
 .logo {
@@ -246,6 +257,6 @@ input:focus-visible {
 }
 
 .cadastre:hover {
-  transform: scale(1.02);
+  color: rgb(253, 204, 144);
   transition: all 0.3s ease;
 }
