@@ -30,7 +30,7 @@ a {
 .titlle-icon {
     position: absolute;
     font-size: 14px;
-    color: var(--cor-icons-cinza-escuro);
+    color: var(--cor-bottombar-cinza);
     margin-top: 36px;
     z-index: 1;
 }
@@ -54,7 +54,7 @@ svg {
     border: var(--cor-text1-branco) solid 7px;
     background-color: var(--cor-text1-branco);
     font-size: 22px;
-    color: var(--cor-icons-cinza-escuro);
+    color: var(--cor-bottombar-cinza);
     z-index: 2;
 }
 

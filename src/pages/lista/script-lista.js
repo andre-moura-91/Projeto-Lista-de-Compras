@@ -72,6 +72,42 @@ function adicionarItem() {
     return upgradeButtonState();
 }
 
+
+let todosLista = document.getElementById('todos-lista');
+let noCarrinho = document.getElementById('no-carrinho');
+let listaPedente = document.getElementById('lista-pendentes');
+
+const abas = {
+    todosLista: document.getElementById('todos-lista'),
+    noCarrinho: document.getElementById('no-carrinho'),
+    listaPedente: document.getElementById('lista-pendentes')
+};
+
+const ativarAbaVisualmente = (abaAtiva) => {
+    Object.values(abas).forEach(aba => aba.classList.remove('ativa'));
+    abaAtiva.classList.add('ativa');
+};
+
+abas.todosLista.addEventListener('click', () => {
+    ativarAbaVisualmente(abas.todosLista);
+    renderizarItensValor();
+});
+
+abas.noCarrinho.addEventListener('click', function() {
+    ativarAbaVisualmente(abas.noCarrinho);
+
+    carrinhosItens.filter(item => item.checado);
+    renderizarItensValor();
+    return;
+});
+
+abas.listaPedente.addEventListener('click', () => {
+    ativarAbaVisualmente(abas.listaPedente);
+
+    const itensFiltrados = carrinhosItens.filter(item => !item.checado).length;
+    renderizarItensValor(itensFiltrados);
+});
+
 function renderizarItensValor() {
     const listaCarrinho = document.getElementById('carrinhoLista');
     if (!listaCarrinho) return;
@@ -126,7 +162,20 @@ function renderizarItensValor() {
         itemLista.append(checkbox, texto, itens,textoValor, itemLimpar);
         listaCarrinho.appendChild(itemLista);
 
+        if (noCarrinho) {
+            noCarrinho.textContent = 'No Carrinho' + ' ('+ carrinhosItens.filter(item => item.checado).length + ')';
+        } else {
+            noCarrinho.textContent = 'No Carrinho' + '(0)';
+        }
+
+        if (listaPedente) {
+            listaPedente.textContent = 'Pendentes' + ' (' + carrinhosItens.filter(item => !item.checado).length + ')';
+        } else {            
+            listaPedente.textContent = 'Pendentes' + ' (0)';
+        }
+
     });
+    
 
     let listaVazia = document.getElementById("carrinho_container");
         if (carrinhosItens.length > 0) {
@@ -174,6 +223,8 @@ function atualizarTotal() {
     let qtnPedente = document.getElementById('qtn-pendente');
     let qtnCarrinho = document.getElementById('qtn-carrinho');
     let qtnTotal = document.getElementById('qtn-total');
+
+    if (todosLista) todosLista.textContent = 'Todos' + ' (' + carrinhosItens.length + ')';
 
     let itemTotal = carrinhosItens
         .filter(item => item.checado)
