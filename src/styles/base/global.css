@@ -20,6 +20,7 @@
   --cor-input-cinza: #eeeeee;
   --cor-subtitulo-cinza: #5C5B5B;
   --cor-valor-carrinho: #43cfcf;
+  --cor-bottombar-cinza: #b6b6b6;
 }
 
 /* 2. RESET CSS (Padroniza o comportamento dos elementos) */
@@ -35,7 +36,7 @@ body {
   /* Ao aplicar aqui, todos os textos do site herdam essa fonte automaticamente */
   font-family: var(--fonte-logo, --fonte-principal-titulo, --fonte-texto);
   background-color: var(--cor-principal-laranja, --cor-bg-clara, --cor-input-cinza);
-  color: var(--cor-text2-preto, --cor-text1-branco, --cor-icons-cinza-escuro, --cor-principal-laranja, --cor-subtitulo-cinza, --cor-input-cinza);
+  color: var(--cor-text2-preto, --cor-text1-branco, --cor-icons-cinza-escuro, --cor-principal-laranja, --cor-subtitulo-cinza, --cor-input-cinza, --cor-bottombar-cinza);
   line-height: 1.6;
 }
 
